@@ -48,7 +48,7 @@ const CocktailForm: React.FunctionComponent<CocktailFormProps> = ({
     dispatch(fetchAlcoholicTypesList());
     dispatch(fetchGlassesList());
     dispatch(fetchIngredientsList());
-  }, []);
+  }, [dispatch]);
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
