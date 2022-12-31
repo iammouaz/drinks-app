@@ -1,4 +1,4 @@
-import { Button, Input, Select } from "@chakra-ui/react";
+import { Button, Select } from "@chakra-ui/react";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { ICocktailForm, ISteps } from "Models/Cocktails/form-types";
 import { Dispatch, SetStateAction, useEffect } from "react";
@@ -97,10 +97,7 @@ const CocktailForm: React.FunctionComponent<CocktailFormProps> = ({
                 placeholder={`${t("type")}`}
               >
                 {data?.alcoholicTypes.drinks.map((type, index) => (
-                  <option
-                    key={`type ${index}`}
-                    value={type.strAlcoholic}
-                  >
+                  <option key={`type ${index}`} value={type.strAlcoholic}>
                     {type.strAlcoholic}
                   </option>
                 ))}
@@ -123,10 +120,7 @@ const CocktailForm: React.FunctionComponent<CocktailFormProps> = ({
                 placeholder={`${t("glass")}`}
               >
                 {data?.glasses.drinks.map((glass, index) => (
-                  <option
-                    key={`glass ${index}`}
-                    value={glass.strGlass}
-                  >
+                  <option key={`glass ${index}`} value={glass.strGlass}>
                     {glass.strGlass}
                   </option>
                 ))}
