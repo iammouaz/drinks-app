@@ -25,7 +25,7 @@ const CocktailResultPanel: React.FunctionComponent<
       setloader(false);
       setCocktail(selectCocktail(steps.form));
     }, 2000);
-  }, []);
+  }, [selectCocktail, steps.form]);
 
   console.log(cocktail);
   const hundleReset = () => {
