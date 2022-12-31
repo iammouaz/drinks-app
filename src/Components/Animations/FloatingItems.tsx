@@ -60,7 +60,7 @@ const FloatingItems: React.FunctionComponent<FloatingItemsProps> = () => {
         drag
         dragConstraints={{ left: 0, right: 0, bottom: 0, top: 0 }}
         dragElastic={0.4}
-        className="right-44 top-96 w-36 relative"
+        className="right-44 top-[11rem] w-36 relative"
       >
         <img alt="Beverage" draggable="false" src={Beverage3} className="" />
       </motion.div>
@@ -78,7 +78,7 @@ const FloatingItems: React.FunctionComponent<FloatingItemsProps> = () => {
         drag
         dragConstraints={{ left: 0, right: 0, bottom: 0, top: 0 }}
         dragElastic={0.4}
-        className="xl:left-[40rem] left-[10rem] top-44 xl:top-80 w-36 relative"
+        className="xl:left-[40rem] left-[10rem] top-44 xl:top-[11rem] w-36 relative"
       >
         <img alt="Beverage" draggable="false" src={Beverage4} className="" />
       </motion.div>
