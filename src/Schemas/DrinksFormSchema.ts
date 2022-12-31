@@ -34,7 +34,7 @@ export const CocktailFormSchema = yup.object({
     .string()
     .required(lang === "en" ? "Glass Type is required" : "Cam Türü gereklidir"),
   ingredients: yup
-    .string()
+    .array()
     .required(
       lang === "en"
         ? "Please check one or more Ingredients"

@@ -24,7 +24,7 @@ function App() {
       phone: "",
       category: "",
       glass: "",
-      ingredients: "",
+      ingredients: [],
       type: "",
     },
   });

@@ -60,7 +60,7 @@ const CocktailForm: React.FunctionComponent<CocktailFormProps> = ({
       ) : (
         <div className="flex flex-col gap-8 my-4 container mx-auto">
           <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-3 self-center">
               <Select
                 {...register("category")}
                 name="category"
@@ -88,7 +88,7 @@ const CocktailForm: React.FunctionComponent<CocktailFormProps> = ({
               </span>
             </div>
 
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-3 self-center">
               <Select
                 {...register("type")}
                 name="type"
@@ -111,7 +111,7 @@ const CocktailForm: React.FunctionComponent<CocktailFormProps> = ({
                 </motion.div>
               </span>
             </div>
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-3 self-center">
               <Select
                 {...register("glass")}
                 name="glass"
@@ -134,14 +134,9 @@ const CocktailForm: React.FunctionComponent<CocktailFormProps> = ({
                 </motion.div>
               </span>
             </div>
-            <div className="flex flex-col gap-3">
-              <Select
-                {...register("ingredients")}
-                name="ingredients"
-                _focus={{ bgColor: "white" }}
-                variant="filled"
-                placeholder={`${t("ingredients")}`}
-              >
+            <div className="flex flex-col gap-3 self-center">
+              <label>{`${t("ingredients")}`}</label>
+              <select {...register("ingredients")} multiple name="ingredients">
                 {data?.ingredients.drinks.map((ingredient, index) => (
                   <option
                     key={`ingerdient ${index} `}
@@ -150,7 +145,7 @@ const CocktailForm: React.FunctionComponent<CocktailFormProps> = ({
                     {ingredient.strIngredient1}
                   </option>
                 ))}
-              </Select>
+              </select>
               <span className="text-red-600">
                 <motion.div
                   animate={{ x: [null, -15, 15, 0] }}

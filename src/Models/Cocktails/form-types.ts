@@ -10,7 +10,7 @@ export interface ICocktailForm {
   category: string;
   type: string;
   glass: string;
-  ingredients: string;
+  ingredients: string[];
 }
 
 

@@ -27,7 +27,6 @@ const CocktailResultPanel: React.FunctionComponent<
     }, 2000);
   }, [selectCocktail, steps.form]);
 
-  console.log(cocktail);
   const hundleReset = () => {
     setsteps({
       step: 1,
@@ -39,7 +38,7 @@ const CocktailResultPanel: React.FunctionComponent<
         phone: "",
         category: "",
         glass: "",
-        ingredients: "",
+        ingredients: [],
         type: "",
       },
     });

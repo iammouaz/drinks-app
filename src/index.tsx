@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
@@ -7,21 +7,22 @@ import { Provider } from "react-redux";
 import store from "./Redux/storeConfig";
 import { ChakraProvider } from "@chakra-ui/react";
 import { theme } from "Configs/ChakraTheme";
-import { i18nextInit } from 'Configs/i18nextInit'
+import { i18nextInit } from "Configs/i18nextInit";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 
 /* Initializing the i18next library. */
-i18nextInit()
-
+i18nextInit();
 
 root.render(
   <React.StrictMode>
     <Provider store={store}>
       <ChakraProvider theme={theme}>
-        <App />
+        <Suspense>
+          <App />
+        </Suspense>
       </ChakraProvider>
     </Provider>
   </React.StrictMode>

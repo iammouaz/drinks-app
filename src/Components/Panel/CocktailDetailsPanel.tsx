@@ -69,8 +69,9 @@ const CocktailDetailsPanel: React.FunctionComponent<
               <FormLabel>
                 {t("ingredients")}:
                 <span className="px-2 text-white">
-                  {" "}
-                  {steps.form.ingredients}
+                  {steps.form.ingredients.map((item, i) => (
+                    <>{item} {i + 1 < steps.form.ingredients.length && "& "}</>
+                  ))}
                 </span>
               </FormLabel>
             </div>
